@@ -1,8 +1,15 @@
 // Built-in types: number, string, boolean, null, undefined, object
 // Typescript specific: any, unknown, never, enum, tuple
 
-//Use const keyword with enum, compiler will generate much optimized code 
+function calculateTax(income: number, taxYear = 2022): number {
+  if(taxYear < 2022)
+    return income * 1.2
+  return income * 1.3
+}
 
-const enum Size {Small = 1, Medium, Large}
-// enum Size {Small = 's', Medium = 'm', Large = 'l'}
-let mySize: Size = Size.Medium
+calculateTax(10_000)
+
+// void suggests no return value
+function whatever(): void {
+  console.log('haha')
+}

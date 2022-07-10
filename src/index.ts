@@ -1,13 +1,20 @@
 // Built-in types: number, string, boolean, null, undefined, object
 // Typescript specific: any, unknown, never, enum, tuple
 
-// read only so you can't modify
-let employee: {
-  readonly id: number,
-  name: string
-  retire: (date: Date) => void
-} = {id: 1, name: '', retire: (date: Date) => {
-  console.log(date)
-}}
+type Employee = {
+  readonly id: number;
+  name: string;
+  retire: (date: Date) => void;
 
-employee.id = 0
+}
+
+// read only so you can't modify
+let employee: Employee = {
+
+  id: 1,
+  name: "",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
+ 

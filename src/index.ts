@@ -1,9 +1,17 @@
 // Built-in types: number, string, boolean, null, undefined, object
 // Typescript specific: any, unknown, never, enum, tuple
 
-let cid: any = 1
-// Type assertion的两种方法
-let customerID1 = <number>cid
-let customerID2 = cid as number
+interface UserInterface {
+  readonly id: number
+  name: string
+  age?: number
+}
 
-// customerID1 = true
+// Use interface with objects. Interfacec can't be used with Union types
+
+const user1: UserInterface = {
+  id: 1,
+  name: 'Stefan'
+}
+
+// user1.id = 7

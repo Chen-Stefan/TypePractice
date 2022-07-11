@@ -1,18 +1,21 @@
 // Built-in types: number, string, boolean, null, undefined, object
 // Typescript specific: any, unknown, never, enum, tuple
 
-// Enum
-
-enum Direction1 {
-  Up = 1,
-  Down,
-  Left,
-  Right
+//冒号后面的是type
+const user1: {
+  id: number,
+  name: string
+} = {
+  id: 1,
+  name: 'John'
+}
+//自定义type
+type User = {
+  id: number, 
+  name: string
 }
 
-enum Direction2 {
-  Up = 'Up',
-  Down = 'Down',
-  Left = 'Left',
-  Right = 'Right'
+const user2: User = {
+  id: 2,
+  name: 'Stefan'
 }

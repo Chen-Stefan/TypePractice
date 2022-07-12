@@ -1,37 +1,12 @@
 // Built-in types: number, string, boolean, null, undefined, object
 // Typescript specific: any, unknown, never, enum, tuple
 
-interface PersonInterface {
-  id: number, 
-  name: string,
-  register(): string
-}
-class Person implements PersonInterface {
-  id: number
-  name: string
-
-  constructor(id: number, name: string) {
-    this.id = id
-    this.name = name
-  }
-
-  register() {
-    return `${this.name} is now registered`
-  }
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items)
 }
 
-const stefan = new Person(1, 'Stefan Chen')
-const tom = new Person(2, 'Tom Qu')
+let numArray = getArray<number>([1,2,3,4])
+let strArray = getArray<string>(['stefan', 'damon', 'tom'])
 
-console.log(stefan.register())
-
-class Employee extends Person {
-  position: string
-
-  constructor(id: number, name: string, position: string) {
-    super(id, name)
-    this.position = position
-  }
-}
-
-const shawn = new Employee(8, 'Shawn', 'Assistant')
+// numArray.push('hello')
+// strArray.push(1)

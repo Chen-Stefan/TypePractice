@@ -1,20 +1,6 @@
 "use strict";
-class Person {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-    }
-    register() {
-        return `${this.name} is now registered`;
-    }
+function getArray(items) {
+    return new Array().concat(items);
 }
-const stefan = new Person(1, 'Stefan Chen');
-const tom = new Person(2, 'Tom Qu');
-console.log(stefan.register());
-class Employee extends Person {
-    constructor(id, name, position) {
-        super(id, name);
-        this.position = position;
-    }
-}
-const shawn = new Employee(8, 'Shawn', 'Assistant');
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(['stefan', 'damon', 'tom']);

@@ -11,3 +11,10 @@ class Person {
 const stefan = new Person(1, 'Stefan Chen');
 const tom = new Person(2, 'Tom Qu');
 console.log(stefan.register());
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const shawn = new Employee(8, 'Shawn', 'Assistant');

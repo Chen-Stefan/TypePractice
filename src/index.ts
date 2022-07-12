@@ -1,17 +1,21 @@
 // Built-in types: number, string, boolean, null, undefined, object
 // Typescript specific: any, unknown, never, enum, tuple
 
-interface UserInterface {
-  readonly id: number
+class Person {
+  id: number
   name: string
-  age?: number
+
+  constructor(id: number, name: string) {
+    this.id = id
+    this.name = name
+  }
+
+  register() {
+    return `${this.name} is now registered`
+  }
 }
 
-// Use interface with objects. Interfacec can't be used with Union types
+const stefan = new Person(1, 'Stefan Chen')
+const tom = new Person(2, 'Tom Qu')
 
-const user1: UserInterface = {
-  id: 1,
-  name: 'Stefan'
-}
-
-// user1.id = 7
+console.log(stefan.register())
